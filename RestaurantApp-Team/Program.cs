@@ -30,6 +30,7 @@ namespace RestaurantApp_Team
                 Console.WriteLine("1. Add Restaurant");
                 Console.WriteLine("2. Show Good Rating");
                 Console.WriteLine("3. Show Summary");
+                Console.WriteLine("4. Seach Name");
                 Console.WriteLine("0. Exit");
                 Console.Write("Select Menu: ");
 
@@ -58,7 +59,15 @@ namespace RestaurantApp_Team
         // คน A รับผิดชอบ
         static void AddRestaurant()
         {
-            Console.WriteLine("completed");
+            Console.WriteLine("=== รายชื่อร้านอาหารทั้งหมด ===");
+
+            foreach (Restaurant r in restaurants)
+            {
+                Console.WriteLine(
+                    r.Name + " - " + r.Type + " - " + r.Rating
+                );
+            }
+
         }
 
         // คน B รับผิดชอบ
